@@ -1,0 +1,95 @@
+description = "Default layout"
+==
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Pagina titel - {{ this.page.title }}</title>
+  <meta name="description" content="{{ this.page.meta_description }}">
+  <meta name="title" content="{{ this.page.meta_title }}">
+  <meta name="author" content="Dieter Vyncke">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="OctoberCMS">
+
+  <meta property="fb:app_id" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:title" content=""/>
+  <meta property="og:description"  content="" />
+  <meta property="og:image" content="{{ 'assets/images/fb.jpg'|theme }}" />
+  <meta property="og:locale" content="nl_BE" />
+
+  <!-- <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ 'assets/images/favicon/apple-touch-icon-57x57.png'|theme }}" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ 'assets/images/favicon/apple-touch-icon-114x114.png'|theme }}" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ 'assets/images/favicon/apple-touch-icon-72x72.png'|theme }}" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ 'assets/images/favicon/apple-touch-icon-144x144.png'|theme }}" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="{{ 'assets/images/favicon/apple-touch-icon-60x60.png'|theme }}" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ 'assets/images/favicon/apple-touch-icon-120x120.png'|theme }}" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="{{ 'assets/images/favicon/apple-touch-icon-76x76.png'|theme }}" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ 'assets/images/favicon/apple-touch-icon-152x152.png'|theme }}" />
+  <link rel="icon" type="image/png" href="{{ 'assets/images/favicon/favicon-196x196.png'|theme }}" sizes="196x196" />
+  <link rel="icon" type="image/png" href="{{ 'assets/images/favicon/favicon-96x96.png'|theme }}" sizes="96x96" />
+  <link rel="icon" type="image/png" href="{{ 'assets/images/favicon/favicon-32x32.png'|theme }}" sizes="32x32" />
+  <link rel="icon" type="image/png" href="{{ 'assets/images/favicon/favicon-16x16.png'|theme }}" sizes="16x16" />
+  <link rel="icon" type="image/png" href="{{ 'assets/images/favicon/favicon-128.png'|theme }}" sizes="128x128" />
+  <meta name="application-name" content="&nbsp;"/>
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="{{ 'assets/images/favicon/mstile-144x144.png'|theme }}" />
+  <meta name="msapplication-square70x70logo" content="{{ 'assets/images/favicon/mstile-70x70.png'|theme }}" />
+  <meta name="msapplication-square150x150logo" content="{{ 'assets/images/favicon/mstile-150x150.png'|theme }}" />
+  <meta name="msapplication-wide310x150logo" content="{{ 'assets/images/favicon/mstile-310x150.png'|theme }}" />
+  <meta name="msapplication-square310x310logo" content="{{ 'assets/images/favicon/mstile-310x310.png'|theme }}" /> -->
+
+
+  {% styles %}
+  <link href="{{ [
+    'assets/css/style.css'
+    ]|theme }}" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="page-wrap">
+      <div class="header container">
+        <header class="page-header">
+          <div class="logo-wrap">
+            <div class="wrap">
+                <a class="logo" href="{{ 'home'|page }}"><img src="{{ 'assets/images/logo.png'|theme }}" alt="Logo" /></a>
+            </div>
+          </div>
+
+          <!-- Nav -->
+          <nav class="main-nav" role="navigation">
+            <span class="trigger"><i class="icon-hamburger" aria-hidden="true"></i><span>Menu</span></span>
+
+            <ul class="nav-wrap">
+              <li class="{% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home'|page }}">Home</a></li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+
+
+
+      <!-- Content -->
+      <section class="main">
+        {% page %}
+      </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+      {% partial "footer" %}
+    </footer>
+
+    <!-- Scripts -->
+    <script src="{{ [
+      'assets/javascript/jquery.js',
+      'assets/javascript/plugin.js',
+      'assets/javascript/app.js'
+    ]|theme }}"></script>
+    {% framework %}
+    {% framework extras %}
+    {% scripts %}
+
+  </body>
+  </html>

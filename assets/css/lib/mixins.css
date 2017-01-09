@@ -1,0 +1,103 @@
+.a-c {
+  text-align: center;
+}
+.a-l {
+  text-align: left;
+}
+.a-r {
+  text-align: right;
+}
+.desktop-a-l {
+  text-align: left;
+}
+.desktop-a-c {
+  text-align: center;
+}
+.desktop-a-r {
+  text-align: right;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.tt {
+  text-transform: uppercase;
+}
+/* Micro clearfix hack for clearing floats - h5bp.com/q */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+.clearfix:after {
+  clear: both;
+}
+/* Image replacement */
+.ir {
+  display: block;
+  border: 0;
+  text-indent: -999em;
+  overflow: hidden;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+}
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.vh {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.vh.focusable:active,
+.vh.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+  visibility: hidden;
+}
+/* User select */
+.text-truncate {
+  text-overflow: ellipsis;
+  vertical-align: top;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+}
+/* Flexbox */
+/* Direction of the elements inside a flexbox */
+/* row | row-reverse | column | column-reverse */
+/* Order elements (int) inside a flexbox */
+/* Single line or multiple lines inside a flexbox */
+/* nowrap | wrap | wrap-reverse */
+/* Length of the item relative to the rest of the flexible items */
+.column-break-inside-avoid {
+  -webkit-column-break-inside: avoid;
+  /* Chrome, Safari */
+  page-break-inside: avoid;
+  /* Theoretically FF 20+ */
+  break-inside: avoid-column;
+  /* IE 11 */
+}
