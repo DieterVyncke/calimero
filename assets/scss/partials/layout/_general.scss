@@ -1,0 +1,17 @@
+html
+{
+	overflow-y: scroll;
+
+	@include property( 'font-size', 80%, (
+		1: 100%,
+		3: 115%,
+	) );
+}
+
+body
+{
+	@include default-font;
+	height: 100%;
+	color: $color02;
+	background-color: $color01;
+}

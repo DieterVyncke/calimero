@@ -1,3 +1,3 @@
-$('.trigger').on('click', function(){
-  $('.nav-wrap').slideToggle(500);
-});
+console.log( 'Welcome to your new site' );
+
+let test = 'test';

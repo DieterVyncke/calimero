@@ -1,0 +1,41 @@
+@mixin body-option( $class_names... )
+{
+	@for $i from 1 through length( $class_names )
+	{
+		body.#{nth( $class_names, $i )} &
+		{
+			@content;
+		}
+	}
+}
+
+@mixin clearfix // clearfix ( IE8 and above, which is fine! )
+{
+	&:after
+	{
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin breakpoint( $i )
+{
+	@media screen and ( min-width: nth( $breakpoints, $i ) )
+	{
+		@content;
+	}
+}
+
+@mixin property( $property, $default, $values )
+{
+	#{$property}: $default;
+
+	@each $breakpoint, $value in $values
+	{
+		@include breakpoint( $breakpoint )
+		{
+			#{$property}: $value;
+		}
+	}
+}
