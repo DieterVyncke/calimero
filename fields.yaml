@@ -1,0 +1,82 @@
+tabs:
+  fields:
+
+    ####################################################
+    # Tab: Gereral site settings
+    ####################################################
+
+    website_name:
+      tab: General
+      label: Website Name
+      type: text
+      default: My new website
+
+    website_url:
+      tab: General
+      label: URL
+      type: text
+      default: "locahost"
+
+    description:
+      tab: General
+      label: Description
+      type: text
+      default: "Default seo page description"
+
+    keywords:
+      tab: General
+      label: Keywords
+      type: taglist
+      separator: comma
+      default: website, tagname,...
+
+    google_analytics:
+        tab: General
+        label: Google Analytics code
+        type: text
+
+    ####################################################
+    # Tab: Contact
+    ####################################################
+
+    contact_title:
+      tab: Contact
+      label: Contact
+      type: text
+      default: "Contact"
+
+    contact_subtitle:
+      tab: Contact
+      label: Subtitle
+      type: text
+      default: "Subtitle"
+
+    contact_street_number:
+      tab: Contact
+      label: Street and number
+      type: text
+      default: "teststraat 10a"
+
+    contact_postcode_city:
+      tab: Contact
+      label: Postcode and City
+      type: text
+      default: "9930 Zomergem"
+
+    contact_tel:
+      tab: Contact
+      label: Telephone
+      type: text
+      default: "09 377 77 77"
+
+    contact_email:
+      tab: Contact
+      label: Email
+      type: text
+      default: "info@test.com"
+
+    contact_photo:
+      tab: Contact
+      label: Photo
+      type: mediafinder
+      mode: image

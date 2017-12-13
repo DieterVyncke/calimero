@@ -1,1 +1,1 @@
-# oc-template
+#Calimero theme - Starters theme

@@ -1,77 +1,39 @@
 description = "Default layout"
 ==
+function onStart()
+{
+}
+==
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Pagina titel - {{ this.page.title }}</title>
-  <meta name="description" content="{{ this.page.meta_description }}">
-  <meta name="title" content="{{ this.page.meta_title }}">
-  <meta name="author" content="Dieter Vyncke">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="OctoberCMS">
+	<head>
+		<title>{{ this.page.title }} | {{ this.theme.website_name }}</title>
+		{% partial 'head' %}
+	</head>
 
-  <meta property="og:url" content="{{ url('/') }}" />
-  <meta property="og:title" content="{{ this.page.title }}"/>
-  <meta property="og:description"  content="{{ this.page.meta_description }}" />
-  <meta property="og:image" content="{{ 'assets/images/fb.jpg'|theme }}" />
-  <meta property="og:locale" content="nl_BE" />
+	<body>
+		<div id="wrapper">
 
-<link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-touch-icon-57x57.png" />
-<link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-touch-icon-60x60.png" />
-<link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-touch-icon-72x72.png" />
-<link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicons/apple-touch-icon-76x76.png" />
-<link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/apple-touch-icon-114x114.png" />
-<link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicons/apple-touch-icon-120x120.png" />
-<link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-touch-icon-144x144.png" />
-<link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-touch-icon-152x152.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon-180x180.png" />
-<link rel="icon" type="image/png" href="assets/img/favicons/favicon-32x32.png" sizes="32x32" />
-<link rel="icon" type="image/png" href="assets/img/favicons/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/png" href="assets/img/favicons/android-chrome-192x192.png" sizes="192x192" />
-<link rel="icon" type="image/png" href="assets/img/favicons/favicon-16x16.png" sizes="16x16" />
-<link rel="shortcut icon" href="assets/img/favicons/favicon.ico" />
+			<header>
 
+				<h2 id="logo">
+					<a href="{{ url('/') }}" title="{{ this.theme.website_name }}">{{ this.theme.website_name }}</a>
+				</h2>
+				
+				{% partial 'main-nav' %}
 
-  {% styles %}
-  <link href="{{ [
-    'assets/css/style.css'
-    ]|theme }}" rel="stylesheet">
-  </head>
-  <body>
-    <!-- Header -->
-	<header>
-		<div id="logo">
-			<h2>
-				<a href="" title="">Logo</a>
-			</h2>
+			</header>
+
+			<main id="main">
+				{% page %}
+			</main>
+
+			<footer id="footer">
+			  {% partial "footer" %}
+			</footer>
+
 		</div>
-		<nav id="main-nav">
-			<ul>
-				<li>
-					<a href="#">Home</a>
-				</li>
-			</ul>
-		</nav>
-	</header>
 
-	<!-- Content -->
-	<div id="main">
-		{% page %}
-	</div>
-
-    <!-- Footer -->
-    <footer id="footer">
-      {% partial "footer" %}
-    </footer>
-
-    <!-- Scripts -->
-    <script src="{{ [
-      'assets/javascript/bundle.js'
-    ]|theme }}"></script>
-    {% framework %}
-    {% framework extras %}
-    {% scripts %}
-
-  </body>
-  </html>
+		{% partial 'scripts' %}
+	</body>
+</html>

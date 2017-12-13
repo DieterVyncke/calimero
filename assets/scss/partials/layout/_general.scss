@@ -1,11 +1,42 @@
 html
 {
 	overflow-y: scroll;
+	font-size: 78%;
 
-	@include property( 'font-size', 80%, (
-		1: 100%,
-		3: 115%,
-	) );
+	@include breakpoint( 2 )
+	{
+		font-size: 80%;
+	}
+
+	@include breakpoint( 3 )
+	{
+		font-size: 88%;
+	}
+
+	@include breakpoint( 5 )
+	{
+		font-size: 95%;
+	}
+
+	@include breakpoint( 6 )
+	{
+		font-size: 100%;
+	}
+
+	@include breakpoint( 7 )
+	{
+		font-size: 105%;
+	}
+
+	@include breakpoint( 9 )
+	{
+		font-size: 115%;
+	}
+
+	@include breakpoint( 10 )
+	{
+		font-size: 120%;
+	}
 }
 
 body

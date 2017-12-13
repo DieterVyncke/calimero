@@ -1,5 +1,5 @@
-name: 'Starts theme'
-description: ''
+name: 'Calimero'
+description: 'Calimero theme - Starters theme'
 author: 'Dieter Vyncke'
-homepage: 'dietervyncke.be'
-code: oc-template
+code: calimero
+form: fields.yaml

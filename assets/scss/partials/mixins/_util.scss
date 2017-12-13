@@ -9,33 +9,10 @@
 	}
 }
 
-@mixin clearfix // clearfix ( IE8 and above, which is fine! )
-{
-	&:after
-	{
-		content: '';
-		display: table;
-		clear: both;
-	}
-}
-
 @mixin breakpoint( $i )
 {
 	@media screen and ( min-width: nth( $breakpoints, $i ) )
 	{
 		@content;
-	}
-}
-
-@mixin property( $property, $default, $values )
-{
-	#{$property}: $default;
-
-	@each $breakpoint, $value in $values
-	{
-		@include breakpoint( $breakpoint )
-		{
-			#{$property}: $value;
-		}
 	}
 }
