@@ -1,5 +1,4 @@
 /node_modules
-/build
-/assets/css
-/assets/img/favicons
+/assets/css/style.css
+/assets/img/build/
 /assets/javascript/bundle.js

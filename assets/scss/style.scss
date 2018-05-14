@@ -11,6 +11,16 @@
 @import 'partials/layout/wrap';
 
 // Components
-@import 'partials/components/wysiwyg';
+@import 'partials/components/base';
+
+// Header
+@import 'partials/layout/header/base';
+
+// Main
+@import 'partials/layout/main/base';
+
+// Footer
+@import 'partials/layout/footer/base';
 
 // Pages
+@import 'partials/layout/pages/base';
